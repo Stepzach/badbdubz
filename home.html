@@ -120,6 +120,15 @@
                     navColor = '#abcdef';
                     break;
                   }
+		     document.querySelectorAll('#nav a').forEach(link => {
+        if (link.getAttribute('href').includes(currentSection.id)) {
+            link.style.backgroundColor = navColor;  // Change background color
+            link.classList.add('active-link');      // Add class to underline
+        } else {
+            link.style.backgroundColor = '';  // Reset background
+            link.classList.remove('active-link');  // Remove underline class
+        }
+    });
             }
 
             nav.style.backgroundColor = navColor;
@@ -142,29 +151,36 @@
     
     #nav a:hover {
        transition: background-color 0.3s ease; /* smooth transition */
+	  
     }
 
    #nav a:nth-child(1):hover {
         background-color: #ffcccc; /* Light red on hover */
+	   text-decoration: underline;
     }
 
     #nav a:nth-child(2):hover {
          background-color: rgb(131, 172, 255);  /* Light green on hover */
+	    text-decoration: underline;
     }
     #nav a:nth-child(3):hover {
          background-color: yellowgreen;   /* Light blue on hover */
+	    text-decoration: underline;
     }
 
     #nav a:nth-child(4):hover {
         background-color: rgb(255, 83, 83);  /* Light yellow on hover */
+	    text-decoration: underline;
     }
 
     #nav a:nth-child(5):hover {
         background-color: rgb(255, 83, 83);  /* Light cyan on hover */
+	    text-decoration: underline;
     }
 
     #nav a:nth-child(6):hover {
         background-color: #ffccff;  /* Light magenta on hover */
+	    text-decoration: underline;
     }
 </style>
 
