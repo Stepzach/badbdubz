@@ -38,15 +38,35 @@
 
             <!-- NAV -->
            <nav id="nav" role="navigation" style="background-color: rgb(255, 143, 233);">
-    <a href="nail-the-brief/"><span>Home</span></a>
-    <a href="nail-the-brief/"><span>Events</span></a>
-    <a href="champion-originality/"><span>Residents</span></a>
-    <a href="outwit-deadlines/"><span>Mixes</span></a>
-    <a href="demystify-feedback/"><span>Contact</span></a>
-    <a href="about-tyrus/"><span>Shop</span></a>
+    <a href="#section-1"><span>Home</span></a>
+    <a href="#section-2"><span>Events</span></a>
+    <a href="#section-3"><span>Residents</span></a>
+    <a href="#section-4"><span>Mixes</span></a>
+    <a href="#section-5"><span>Contact</span></a>
+     <a href="shop"><span>Shop</span></a>
 </nav>
 
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+  const navLinks = document.querySelectorAll('#nav a[href^="#"]');
 
+  navLinks.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+
+      if (targetElement) {
+        window.scrollTo({
+          top: targetElement.offsetTop,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
+});
+</script>
 
 
 <style>
