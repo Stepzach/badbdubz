@@ -56,10 +56,13 @@
 
       const targetId = this.getAttribute('href');
       const targetElement = document.querySelector(targetId);
+      const offset = parseInt(this.getAttribute('data-offset') || 0, 10); // Get offset from data-offset, or default to 0
 
       if (targetElement) {
+        const targetPosition = targetElement.offsetTop + offset;
+
         window.scrollTo({
-          top: targetElement.offsetTop,
+          top: targetPosition,
           behavior: 'smooth'
         });
       }
