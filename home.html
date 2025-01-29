@@ -37,7 +37,7 @@
             <a class="logo" href="index.html"><span>Tyrus</span></a>
 
             <!-- NAV -->
-            <nav id="nav" role="navigation" style="background-color: rgb(255, 143, 233);">
+           <nav id="nav" role="navigation" style="background-color: rgb(255, 143, 233);">
     <a href="nail-the-brief/"><span>Home</span></a>
     <a href="nail-the-brief/"><span>Events</span></a>
     <a href="champion-originality/"><span>Residents</span></a>
@@ -45,6 +45,65 @@
     <a href="demystify-feedback/"><span>Contact</span></a>
     <a href="about-tyrus/"><span>Shop</span></a>
 </nav>
+
+
+
+
+<style>
+    #nav {
+        transition: background-color 0.3s ease; /* Smooth transition */
+        width: 100%; /* Make it full width when fixed */
+      z-index: 1000; /* Ensure it stays above other content*/
+
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const nav = document.getElementById('nav');
+        const sections = document.querySelectorAll('section[id^="section-"]');
+      // Default background color
+      const defaultNavColor = 'rgb(255, 143, 233)';
+        function updateNavBackground() {
+            let navColor = defaultNavColor;
+            let currentSection = null;
+
+             sections.forEach(section => {
+               const rect = section.getBoundingClientRect();
+              // Check if the top of the section has reached the top of the viewport
+               if (rect.top <= 0 ) {
+                 currentSection = section;
+                }
+             });
+
+                if (currentSection){
+                   switch (currentSection.id) {
+                    case 'section-1':
+                      navColor = 'rgb(255, 143, 233)';
+                      break;
+                    case 'section-2':
+                      navColor = 'rgb(131, 172, 255)';
+                      break;
+                    case 'section-3':
+                      navColor = 'yellowgreen';
+                       break;
+                    case 'section-4':
+                      navColor = '#ffaaff';
+                      break;
+                   case 'section-5':
+                      navColor = '#abcdef';
+                      break;
+
+
+                  }
+                }
+
+              nav.style.backgroundColor = navColor;
+        }
+        // Update nav on initial load and scroll
+        updateNavBackground();
+        window.addEventListener('scroll', updateNavBackground);
+    });
+</script>
 
 <style>
     #nav a {
@@ -101,7 +160,10 @@
         <!-- MAIN -->
         <main role="main" id="main" class="landing" style="background-color: rgb(255, 143, 233);">
 
-            <!-- INTRO -->
+            <!-- INTRO --><section id="section-1">
+
+
+
             <section id="intro">
 
                 <div style="justify-content: start;">
@@ -156,7 +218,11 @@
                 </div>
 
             </section>
+</section>
 
+
+            <section id="section-2">
+ 
             <!-- INTRO LINKS -->
            <section id="intro-links" style="height: 100px;">
     <div class="scrolling-container">
@@ -212,7 +278,11 @@
                 </div>
 
             </section>
+            </section>
 
+<section id="section-3">
+ 
+            
             <!-- SHARING -->
             <section id="sharing" style="background-color: yellowgreen;">
 
@@ -232,8 +302,12 @@
                 </div>
 
             </section>
+</section>
 
             <!-- HERES HOW IT WORKS -->
+              
+<section id="section-4">
+  
             <section id="how-it-works">
 
                 <div style="background-color: rgb(255, 83, 83);">
@@ -282,14 +356,17 @@
                     </figure>
                 </div>
 
-            </section>
+            </section></section>
 
+           
+<section id="section-5">
+  
             <!-- NEXT UP -->
             <section id="next-up" class="two">
                 <h2>Next Up</h2>
                 <a href="#main" class="back-to-top"><span>Back To Top</span></a>
                 <a href="nail-the-brief/" class="next pink"><span>Get Started</span><span>01 Nail The Brief</span></a>
-            </section>
+            </section></section>
         </main>
 
         <!-- FOOTER -->
