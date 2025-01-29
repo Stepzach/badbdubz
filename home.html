@@ -158,10 +158,45 @@
             </section>
 
             <!-- INTRO LINKS -->
-            <section id="intro-links">
-                <a href="about-tyrus/" class="next red"><span>Learn More</span><span>About Tyrus</span></a>
-                <a href="nail-the-brief/" class="next pink"><span>Get Started</span><span>01 Nail The Brief</span></a>
-            </section>
+           <section id="intro-links" style="height: 100px;">
+    <div class="scrolling-container">
+        <span class="scrolling-text" style="font-size: 40px;">
+            UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  •  UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  •  UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  • 
+        </span>
+        <span class="scrolling-text" style="font-size: 40px;">
+          UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  •   UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  •  UKG  •  140  •  GhettoTek  •  Jungle  •  Hard House  • 
+        </span>
+    </div>
+</section>
+<style>
+    #intro-links {
+        width: 100%;
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: #f0f0f0;
+        padding: 10px 0;
+        align-content:center;
+    }
+
+    .scrolling-container {
+        display: inline-block;
+        animation: scrollText 45s linear infinite; /* Adjusted duration */
+    }
+
+    .scrolling-text {
+      display: inline-block; /* Required for adjacent display */
+      white-space: nowrap; /* Keep text on single line */
+    }
+
+    @keyframes scrollText {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+    }
+</style>
 
             <!-- WERE HERE TO HELP -->
             <section id="here-to-help" style="background-color: rgb(131, 172, 255);">
