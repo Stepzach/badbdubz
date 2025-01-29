@@ -58,51 +58,53 @@
     }
 </style>
 <script>
+   <script>
     document.addEventListener('DOMContentLoaded', () => {
         const nav = document.getElementById('nav');
         const sections = document.querySelectorAll('section[id^="section-"]');
-      // Default background color
-      const defaultNavColor = 'rgb(255, 143, 233)';
+        const defaultNavColor = 'rgb(255, 143, 233)'; // Default background color
+        const offset = 1; // Offset in pixels (adjust this)
+
         function updateNavBackground() {
             let navColor = defaultNavColor;
             let currentSection = null;
 
-             sections.forEach(section => {
-               const rect = section.getBoundingClientRect();
-              // Check if the top of the section has reached the top of the viewport
-               if (rect.top <= 0 ) {
-                 currentSection = section;
+            sections.forEach(section => {
+                const rect = section.getBoundingClientRect();
+                const navRect = nav.getBoundingClientRect();
+
+                // Check if the top of the section is offset pixels above the bottom of the nav
+                 if (rect.top <= navRect.bottom + offset) {
+                    currentSection = section;
                 }
-             });
+            });
 
-                if (currentSection){
-                   switch (currentSection.id) {
-                    case 'section-1':
-                      navColor = 'rgb(255, 143, 233)';
-                      break;
-                    case 'section-2':
-                      navColor = 'rgb(131, 172, 255)';
-                      break;
-                    case 'section-3':
-                      navColor = 'yellowgreen';
-                       break;
-                    case 'section-4':
-                      navColor = '#ffaaff';
-                      break;
-                   case 'section-5':
-                      navColor = '#abcdef';
-                      break;
-
-
+            if (currentSection) {
+                switch (currentSection.id) {
+                  case 'section-1':
+                    navColor = 'rgb(255, 143, 233)';
+                    break;
+                  case 'section-2':
+                    navColor = 'rgb(131, 172, 255)';
+                    break;
+                  case 'section-3':
+                    navColor = 'yellowgreen';
+                     break;
+                  case 'section-4':
+                    navColor = '#ffaaff';
+                    break;
+                 case 'section-5':
+                    navColor = '#abcdef';
+                    break;
                   }
-                }
+            }
 
-              nav.style.backgroundColor = navColor;
+            nav.style.backgroundColor = navColor;
         }
-        // Update nav on initial load and scroll
         updateNavBackground();
         window.addEventListener('scroll', updateNavBackground);
     });
+</script>
 </script>
 
 <style>
