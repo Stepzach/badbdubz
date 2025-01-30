@@ -766,9 +766,125 @@ var Brush = (function() {
                     <p>
                        glimworn static drifts through hollow corridors of echo dust while synthetic waves crumble into forgotten loops of shimmered nothing
                     </p>
-                    <p>
-                       glimworn static drifts through hollow corridors of echo dust while synthetic waves crumble into forgotten loops of shimmered nothing.
-                    </p>
+                   <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px; font-size: 35px; border: 2px solid black;">
+    <thead>
+        <tr>
+            <th style="border: 2px solid black; padding: 8px; text-align: left; background-color: #f2f2f2;">Show Name</th>
+            <th style="border: 2px solid black; padding: 8px; text-align: left; background-color: #f2f2f2;">Date</th>
+            <th style="border: 2px solid black; padding: 8px; text-align: left; background-color: #f2f2f2;">Location</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="expandable-row" data-show-name="Show 1" data-date="2024-03-08" data-location="New York" style="cursor: pointer;">
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">Show 1</td>
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">2024-03-08</td>
+            <td class="location-cell" style="border: 2px solid black; padding: 8px; text-align: left; position: relative;">
+              New York
+              <span class="arrow-cell" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">
+                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease; display: inline-block; width: 20px; height: 20px;"><title class="sr-only">Arrow Icon</title><path d="M11.5 19.2 L9.5 17.4 L15.7 11.2 L0 11.2 L0 9.2 L15.7 9.2 L9.5 3 L11.5 1 L20.4 10.2 L11.5 19.2 Z" fill="currentColor"></path></svg>
+              </span>
+            </td>
+        </tr>
+        <tr class="expanded-content hidden" style="border-left: 2px solid black; border-right: 2px solid black; background-color: #f9f9f9; display: none;">
+            <td colspan="3" style="border: 2px solid black; padding: 8px; text-align: left;">
+                <div class="expanded-container" style="display: flex; padding: 15px; align-items: center;">
+                    <img src="image1.jpg" alt="Show 1 Picture" class="expanded-image" style="max-width: 150px; margin-right: 15px;">
+                    <p class="expanded-text" style="margin: 0;">Additional details about Show 1.</p>
+                    <button class="get-tickets-btn" style="margin-left: auto; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">Get Tickets</button>
+                </div>
+            </td>
+        </tr>
+        <tr class="expandable-row" data-show-name="Show 2" data-date="2024-03-15" data-location="London" style="cursor: pointer;">
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">Show 2</td>
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">2024-03-15</td>
+            <td class="location-cell" style="border: 2px solid black; padding: 8px; text-align: left; position: relative;">
+              London
+              <span class="arrow-cell" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">
+                   <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease; display: inline-block; width: 20px; height: 20px;"><title class="sr-only">Arrow Icon</title><path d="M11.5 19.2 L9.5 17.4 L15.7 11.2 L0 11.2 L0 9.2 L15.7 9.2 L9.5 3 L11.5 1 L20.4 10.2 L11.5 19.2 Z" fill="currentColor"></path></svg>
+              </span>
+            </td>
+        </tr>
+        <tr class="expanded-content hidden" style="border-left: 2px solid black; border-right: 2px solid black; background-color: #f9f9f9; display: none;">
+            <td colspan="3" style="border: 2px solid black; padding: 8px; text-align: left;">
+               <div class="expanded-container" style="display: flex; padding: 15px; align-items: center;">
+                    <img src="image2.jpg" alt="Show 2 Picture" class="expanded-image" style="max-width: 150px; margin-right: 15px;">
+                    <p class="expanded-text" style="margin: 0;">More information about Show 2.</p>
+                     <button class="get-tickets-btn" style="margin-left: auto; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">Get Tickets</button>
+               </div>
+            </td>
+        </tr>
+         <tr class="expandable-row" data-show-name="Show 3" data-date="2024-03-22" data-location="Paris" style="cursor: pointer;">
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">Show 3</td>
+            <td style="border: 2px solid black; padding: 8px; text-align: left;">2024-03-22</td>
+            <td class="location-cell" style="border: 2px solid black; padding: 8px; text-align: left; position: relative;">
+             Paris
+              <span class="arrow-cell" style="position: absolute; right: 5px; top: 50%; transform: translateY(-50%);">
+                  <svg width="20" height="20" fill="none" xmlns="http://www.w3.org/2000/svg" style="transition: transform 0.3s ease; display: inline-block; width: 20px; height: 20px;"><title class="sr-only">Arrow Icon</title><path d="M11.5 19.2 L9.5 17.4 L15.7 11.2 L0 11.2 L0 9.2 L15.7 9.2 L9.5 3 L11.5 1 L20.4 10.2 L11.5 19.2 Z" fill="currentColor"></path></svg>
+             </span>
+            </td>
+        </tr>
+        <tr class="expanded-content hidden" style="border-left: 2px solid black; border-right: 2px solid black; background-color: #f9f9f9; display: none;">
+            <td colspan="3" style="border: 2px solid black; padding: 8px; text-align: left;">
+               <div class="expanded-container" style="display: flex; padding: 15px; align-items: center;">
+                    <img src="image3.jpg" alt="Show 3 Picture" class="expanded-image" style="max-width: 150px; margin-right: 15px;">
+                    <p class="expanded-text" style="margin: 0;">Details regarding Show 3.</p>
+                    <button class="get-tickets-btn" style="margin-left: auto; padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 14px;">Get Tickets</button>
+               </div>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const expandableRows = document.querySelectorAll('.expandable-row');
+        
+            expandableRows.forEach(row => {
+                row.addEventListener('click', () => {
+                     const nextRow = row.nextElementSibling;
+                    const arrowSVG = row.querySelector('.arrow-cell svg');
+                    
+                     if(nextRow && nextRow.classList.contains('expanded-content'))
+                      {
+                        if (nextRow.classList.contains('hidden')) {
+                            nextRow.style.display = '';
+                            arrowSVG.style.transform = 'rotate(90deg)';
+                        } else {
+                            nextRow.style.display = 'none';
+                             arrowSVG.style.transform = 'rotate(0deg)';
+                        }
+                    }
+                  
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const expandableRows = document.querySelectorAll('.expandable-row');
+
+    expandableRows.forEach(row => {
+        row.addEventListener('click', () => {
+             const nextRow = row.nextElementSibling;
+            const arrowSVG = row.querySelector('.arrow-cell svg');
+            
+             if(nextRow && nextRow.classList.contains('expanded-content'))
+              {
+                if (nextRow.classList.contains('hidden')) {
+                    nextRow.classList.remove('hidden');
+                    arrowSVG.classList.add('rotated');
+                } else {
+                    nextRow.classList.add('hidden');
+                    arrowSVG.classList.remove('rotated');
+                }
+            }
+          
+        });
+    });
+});
+</script>
                 </div>
 
             </section>
